@@ -54,7 +54,7 @@ class Cocinero < Pirata
 	end
 	
 	def poderDeMando
-		@moral*ingredientes.size()
+		@moral*ingredientes.size
 	end
 	
 	def tomarRonCon(pirata)
