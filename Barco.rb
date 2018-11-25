@@ -1,4 +1,5 @@
 require 'bandos'
+require 'Pirata'
 
 class Barco
 	def initialize(unaResistencia, unPoderDeFuego, unasMuniciones, unaTripulacion, unBando)
