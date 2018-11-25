@@ -7,7 +7,7 @@ class Barco
 		@municiones = unasMuniciones
 		@tripulacion = unaTripulacion
 		@bando = unBando
-		self.bonus()
+		self.bonus
 	end
 
 	def capitan
@@ -15,7 +15,7 @@ class Barco
 	end
 
 	def enfrentar(barco)
-		if( barco.fuerza() > self.fuerza() )
+		if( barco.fuerza > self.fuerza )
 			self.salirPerdedor(barco)
 		else
 			barco.salirPerdedor(self)
@@ -52,13 +52,11 @@ class Barco
 	end
 
 	def dispararCanionazos(cantidad, barcoAtacado)
-		if(@municiones > cantidad)
-			@municiones -= cantidad
-			barcoAtacado.recibirCanionazos(cantidad)
-		end
-		else
+		if(@municiones < cantidad)
 			raise "No hay suficientes municiones."
 		end
+		@municiones -= cantidad
+		barcoAtacado.recibirCanionazos(cantidad)
 	end	
 	
 	def recibirCanionazos(cantidad)

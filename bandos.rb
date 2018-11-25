@@ -1,16 +1,16 @@
-module armadaInglesa
+module ArmadaInglesa
 	def bonus(barco)
 		barco.recibirBonusDeArmadaInglesa
 	end
 end
 
-module unionPirata
+module UnionPirata
 	def bonus(barco)
 		barco.recibirBonusDeUnionPirata
 	end
 end
 
-module armadaDelHolandesErrante
+module ArmadaDelHolandesErrante
 	def bonus(barco)
 		barco.recibirBonusDeArmadaDelHolandesErrante
 	end
