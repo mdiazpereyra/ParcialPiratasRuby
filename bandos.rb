@@ -1,17 +1,25 @@
-module ArmadaInglesa
-	def bonus(barco)
-		barco.recibirBonusDeArmadaInglesa
-	end
+class Bando
+  def bonus(barco)
+  end
 end
 
-module UnionPirata
-	def bonus(barco)
-		barco.recibirBonusDeUnionPirata
-	end
+armadaInglesa = Bando.new
+class << armadaInglesa
+  def bonus(barco)
+    barco.recibirBonusDeArmadaInglesa
+  end
 end
 
-module ArmadaDelHolandesErrante
-	def bonus(barco)
-		barco.recibirBonusDeArmadaDelHolandesErrante
-	end
+unionPirata = Bando.new
+class << unionPirata
+  def bonus(barco)
+    barco.recibirBonusDeUnionPirata
+  end
+end
+
+armadaDelHolandesErrante = Bando.new
+class << armadaDelHolandesErrante
+  def bonus(barco)
+    barco.recibirBonusDeArmadaDelHolandesErrante
+  end
 end
